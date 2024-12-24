@@ -168,3 +168,15 @@ void* realloc_safe(void* ptr, uint32_t new_size, uint32_t ptr_size) {
     free(ptr);
     return new_ptr;
 }
+
+size_t get_total_memory_mb() {
+    return PAGE_SIZE * TOTAL_PAGES / (1024 * 1024);
+}
+
+size_t get_used_memory_mb() {
+    return PAGE_SIZE * pagesAllocated / (1024 * 1024);
+}
+
+size_t get_free_memory_mb() {
+    return get_total_memory_mb() - get_used_memory_mb();
+}

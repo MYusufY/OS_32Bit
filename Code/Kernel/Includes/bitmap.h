@@ -12,6 +12,7 @@
 #define PAGE_SIZE             4096
 #define NUM_PAGES             ((MEM_ALLOC_END - MEM_ALLOC_START) / PAGE_SIZE) // 0 to 1022 = 1023 Pages.
 #define BITMAP_SIZE           ((NUM_PAGES + 31) / 32) // Bitmap size in uint32_t (32 bits per uint32_t)
+#define TOTAL_PAGES 1024 * 256
 
 extern uint32_t bitmap[BITMAP_SIZE];
 extern uint32_t pagesAllocated;

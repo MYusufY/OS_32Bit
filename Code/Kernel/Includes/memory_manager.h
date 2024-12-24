@@ -25,6 +25,8 @@ void free(void* block);
 void* calloc(uint32_t num, uint32_t size);
 void* realloc(void* ptr, uint32_t new_size);
 void* realloc_safe(void* ptr, uint32_t new_size, uint32_t ptr_size);
-
+size_t get_total_memory_mb();
+size_t get_used_memory_mb();
+size_t get_free_memory_mb();
 
 #endif /* _MEMORY_MANAGER_H_ */
